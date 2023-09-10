@@ -36,7 +36,7 @@
                         <a class="nav-link" href="#">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#form">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -174,9 +174,8 @@
                         </div>
                         <div class="form-group">
                             <label for="phoneNumber">Phone Number</label>
-                            <input type="number" class="form-control"
-                                id="phoneNumber"
-                                placeholder="Enter your phone Number">
+                            <input type="number" class="form-control" id="phoneNumber" placeholder="Enter your phone number" onblur="validatePhoneNumber(this)">
+                        <div id="phoneError" style="color: red;"></div>
                         </div>
                         <div class="form-group">
                             <label for="gender">Gender</label>
@@ -187,11 +186,18 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="text" onchange=" validatemail(event)" class="form-control" id="email"
-                            placeholder="Enter your email">
+                            <label for="Age">Age</label>
+                            <input type="number" class="form-control" id="age" placeholder="Enter your Age" onblur="validateAge(this)">
+                            <div id="ageError" style="color: red;"></div>
                         </div>
-                        <button type="submit"  class="btn btn-primary">Submit</button>
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" id="email" placeholder="Enter your email" onblur="validateEmail(this)">
+                                <div id="emailError" style="color: red;"></div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submitButton" disabled>Submit</button>
                     </form>
                 </div>
             </div>
